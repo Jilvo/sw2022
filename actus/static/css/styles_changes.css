@@ -1,3 +1,17 @@
 .bg_nav_bar{
     background-color: #008080;
 }
+.logo_position{
+    /* left: 0;
+    top: 0;
+    position: absolute; */
+}
+.button_hamburger{
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.yellow_title{
+    color: rgb(255, 215, 0) !important;
+    font-weight: bold;
+}
