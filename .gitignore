@@ -1,1 +1,7 @@
 /venv/
+/actus/__pycache__/
+/manage_user/__pycache__/
+/sw2022/__pycache__/
+manage_user/migrations/__pycache__/__init__.cpython-38.pyc
+db.sqlite3
+actus/migrations/__pycache__/__init__.cpython-38.pyc
