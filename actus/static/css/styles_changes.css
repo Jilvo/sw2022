@@ -1,5 +1,73 @@
+
+
+:root
+{
+  --bleuvert : #008080;
+  --lavande : #8D8D8D; /*#E6E6FA;*/
+  --jaune : #FFD700;
+  --shadow : rgba(0,0,0,48) 10px 10px 20px;
+}
+
+footer
+{
+  background-color: var(--bleuvert);
+
+  margin: auto;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  display: flex;
+}
+
+footer a
+{
+  color: #FFD700;
+  font-size: 1vw;
+  text-transform: uppercase;
+  justify-content: center;
+  margin: auto 20px auto 20px;
+  text-shadow: var(--shadow);
+}
+footer a:hover
+{
+  color: #debb00;
+  text-decoration: none;
+}
+
+
+.shadow_title{
+    text-shadow: rgba(0,0,0,48) 10px 10px 20px;
+}
+
+@media only screen and (max-width: 1024px)
+{
+
+  footer a
+  {
+    font-size:3vw;
+    margin-top: -15px;
+  }
+}
+
+@media only screen and (max-width: 480px)
+{
+
+  footer a
+  {
+    font-size: 4vw;
+    margin-top: -15px;
+  }
+}
+
+html{
+    font-family: 'Roboto';  
+}
+.flex{
+    display: flex;
+}
 .bg_nav_bar{
-    background-color: #008080;
+    background-color: var(--bleuvert);
 }
 .logo_position{
     /* left: 0;
@@ -19,3 +87,81 @@
     width: 100%;
     margin-top: -20px;
 }
+.home_article{
+    font-size: 2vw;
+    color: var(--bleuvert);
+    margin-top: 1vw;
+    margin-left: 1vw;
+    
+}
+@media only screen and (max-width: 1024px) {
+    .home_article{
+        font-size: 4vw;
+    } 
+}
+
+@media only screen and (max-width: 600px) {
+    .home_article{
+        font-size: 5vw;
+    } 
+}
+.button_home_article{
+    /* width: 2vw!important; */
+    color: var(--bleuvert);
+    margin-top: 1.4vw;
+    margin-left: 1vw;
+}
+@media only screen and (max-width: 1024px) {
+    .button_home_article{
+        margin-top: 3vw;
+    } 
+}
+@media only screen and (max-width: 800px) {
+    .button_home_article{
+        margin-top: 2.5vw;
+    } 
+}
+@media only screen and (max-width: 600px) {
+    .button_home_article{
+        margin-top: 3vw;
+    } 
+}
+@media only screen and (max-width: 480px) {
+    .button_home_article{
+        margin-top: 2.0vw;
+
+    } 
+}
+.flex_row{
+    flex-direction: row;
+}
+
+.accordion.accordion-3 {
+border-radius: 3px; }
+.accordion.accordion-3 p {
+font-size: 1rem; }
+.accordion.accordion-3 .fa.fa-angle-down {
+margin-top: -10px; }
+
+.accordion .animated-icon1 span {
+background: #F44336;
+}
+
+.embedresize {
+    max-width: 560px;
+    margin: auto;
+    }
+    
+    .embedresize div {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    }
+    
+    .embedresize iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+@media only screen and (max-width: 480px) {

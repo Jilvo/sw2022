@@ -15,8 +15,9 @@
             <meta name="author" content="" />
         </head>
 
+        <!-- Navbar -->
         <nav style="justify-content: center;"class="navbar navbar-expand-lg navbar-dark bg_nav_bar">
-            <a style="font-size: 30px!important;" class="navbar-brand logo_position yellow_title" href="#">SW2022</a>
+            <a style="font-size: 30px!important;" class="navbar-brand logo_position yellow_title shadow_title" href="#">SW2022</a>
             <div class="container">
                 <button style="margin-top: 5px;" class="navbar-toggler button_hamburger" type="button" data-toggle="collapse" data-target="#navbar10">
                     <span class="navbar-toggler-icon"></span>
@@ -24,26 +25,37 @@
                 <div class="navbar-collapse collapse" id="navbar10">
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item">
-                            <a class="nav-link yellow_title" href="#">Savoir</a>
+                            <a class="nav-link yellow_title shadow_title" href="#">Savoir</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title" href="">Connaître</a>
+                            <a class="nav-link yellow_title shadow_title" href="">Connaître</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title" href="#">Suivre</a>
+                            <a class="nav-link yellow_title shadow_title" href="#">Suivre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title" href="#">Participer</a>
+                            <a class="nav-link yellow_title shadow_title" href="#">Participer</a>
                         </li>
                         <li style="text-align: center;">
-                            <i style=" margin-top: 10px; margin-right: 20px;" class="fas fa-microphone fa-2x yellow_title"></i>
-                            <i style=" margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title"></i>
+                            <i style="margin-top: 10px; margin-right: 20px;" class="fas fa-microphone fa-2x yellow_title"></i>
+                            <i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title"></i>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
         {% block content %} {% endblock %}
+        <!-- Footer -->
+        <footer class="text-center text-lg-start">
+            <div class="text-center p-3">
+              <a href="#">Mentions légales</a>
+              <a href="#">Contact</a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </footer>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
