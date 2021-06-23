@@ -27,7 +27,7 @@
                             <a class="nav-link yellow_title" href="#">Savoir</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title" href="//codeply.com">Connaître</a>
+                            <a class="nav-link yellow_title" href="">Connaître</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link yellow_title" href="#">Suivre</a>
@@ -40,13 +40,11 @@
                             <i style=" margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title"></i>
                         </li>
                     </ul>
-                    
                 </div>
-                
             </div>
         </nav>
+        {% block content %} {% endblock %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        {% block content %} {% endblock %}
     </html>

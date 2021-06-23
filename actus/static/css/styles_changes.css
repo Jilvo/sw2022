@@ -15,3 +15,7 @@
     color: rgb(255, 215, 0) !important;
     font-weight: bold;
 }
+.banner{
+    width: 100%;
+    margin-top: -20px;
+}
