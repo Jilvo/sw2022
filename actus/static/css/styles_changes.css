@@ -47,9 +47,9 @@ footer a:hover
   {
     font-size:3vw;
     margin-top: -15px;
+    
   }
 }
-
 @media only screen and (max-width: 480px)
 {
 
@@ -73,6 +73,7 @@ html{
     /* left: 0;
     top: 0;
     position: absolute; */
+    margin-left: 10px;
 }
 .button_hamburger{
     right: 10px;
