@@ -20,6 +20,7 @@ from actus import views as actus_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", actus_views.home_function, name="index"),
+    path("index", actus_views.home_function, name="index"),
+    path("connaitre", actus_views.connaitre_function, name="connaitre")
 
 ]

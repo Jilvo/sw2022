@@ -165,3 +165,34 @@ background: #F44336;
     width: 100%;
     height: 100%;
     }
+
+.scroll_div{
+    overflow-y: auto;
+    max-height: 400px;
+    width: 50%;
+}
+.connaitre_pdf{
+    justify-content: space-between;
+}
+.space_padding{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.button_connaitre{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--bleuvert) !important;
+    border-color: var(--bleuvert) !important;
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--bleuvert) !important;
+    color: var(--jaune) !important;
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--bleuvert);
+}

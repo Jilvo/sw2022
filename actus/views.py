@@ -5,5 +5,9 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def home_function(request):
-    """Display the Savoir page"""
+    """Render the Savoir page"""
     return render(request,"index.html")
+
+def connaitre_function(request):
+    """Render the Connaitre page"""
+    return render(request,"connaitre.html")
