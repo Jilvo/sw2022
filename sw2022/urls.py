@@ -21,6 +21,7 @@ from actus import views as actus_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("index", actus_views.home_function, name="index"),
-    path("connaitre", actus_views.connaitre_function, name="connaitre")
+    path("connaitre", actus_views.connaitre_function, name="connaitre"),
+    path("suivre", actus_views.suivre_function, name="suivre"),
 
 ]

@@ -11,3 +11,7 @@ def home_function(request):
 def connaitre_function(request):
     """Render the Connaitre page"""
     return render(request,"connaitre.html")
+
+def suivre_function(request):
+    """Render the Suivre page"""
+    return render(request,"suivre.html")
