@@ -1,11 +1,15 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
 :root
 {
-  --bleuvert : #008080;
+  --bleuvert : #ba4d5d;
+  --bleu : #0070A9;
   --lavande : #8D8D8D; /*#E6E6FA;*/
-  --jaune : #FFD700;
+  --jaune : #FFFFFF;
   --shadow : rgba(0,0,0,48) 10px 10px 20px;
+  --montserrat : 'Montserrat';
+}
+.montserrat{
+    font-family: var(--montserrat) !important;
 }
 
 footer
@@ -22,7 +26,7 @@ footer
 
 footer a
 {
-  color: #FFD700;
+  color: var(--jaune);
   font-size: 1vw;
   text-transform: uppercase;
   justify-content: center;
@@ -31,13 +35,13 @@ footer a
 }
 footer a:hover
 {
-  color: #debb00;
+  color: var(--jaune);
   text-decoration: none;
 }
 
 
 .shadow_title{
-    text-shadow: rgba(0,0,0,48) 10px 10px 20px;
+    text-shadow: var(--shadow);
 }
 
 @media only screen and (max-width: 1024px)
@@ -59,10 +63,6 @@ footer a:hover
     margin-top: -15px;
   }
 }
-
-html{
-    font-family: 'Roboto';  
-}
 .flex{
     display: flex;
 }
@@ -81,7 +81,7 @@ html{
     position: absolute;
 }
 .yellow_title{
-    color: rgb(255, 215, 0) !important;
+    color: var(--jaune) !important;
     font-weight: bold;
 }
 .banner{
@@ -195,4 +195,14 @@ background: #F44336;
 
 .accordion-button:not(.collapsed){
     color: var(--bleuvert);
+}
+.contact_form{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contact_send{
+    display: flow-root;
+    margin: auto;
+    width: 400px;
+    margin-bottom: 10px;
 }

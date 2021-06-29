@@ -23,5 +23,6 @@ urlpatterns = [
     path("index", actus_views.home_function, name="index"),
     path("connaitre", actus_views.connaitre_function, name="connaitre"),
     path("suivre", actus_views.suivre_function, name="suivre"),
+    path("contact", actus_views.contact_function , name="contact"),
 
 ]

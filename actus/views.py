@@ -15,3 +15,7 @@ def connaitre_function(request):
 def suivre_function(request):
     """Render the Suivre page"""
     return render(request,"suivre.html")
+
+def contact_function(request):
+    """Render the Contact page"""
+    return render(request,"contact.html")
