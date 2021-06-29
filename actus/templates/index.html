@@ -3,13 +3,34 @@
 {% block content %}
 
 <img class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<div>
+  {% for actu_p in actus_pas_dispo %}
+  <p class="home_article not_dispo">{{actu_p.date}} > {{actu_p.title}}</p>
+  {% endfor %}
+  </div>
+  {% for actu in actus_dispo %}
+  <div class="accordion" >
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading_{{actu.id}}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{actu.id}}" aria-expanded="false" aria-controls="collapse_{{actu.numero}}">
+          <div class="flex flex_row">
+              <p class="home_article">{{actu.date}}</p>
+              <p class="home_article">></p>
+              <p class="home_article">{{actu.title}}</p>
+              <a href=""><i class="fas fa-play fa-2x button_home_article"></i></a>
+              <a href={{actu.link_pdf}} target="_blank"><i class="fas fa-file-pdf fa-2x button_home_article"></i></a>
+              <!-- <a href="{% static 'assets/buttons/sw.pdf' %}" target="_blank"><img class="button_home_article" src="{% static 'assets/buttons/share.png' %}"></a> -->
+          </div>
+      </button>
+    </h2>
+    <div id="collapse_{{actu.id}}" class="accordion-collapse collapse {{actu.ouvert_par_defaut}} " aria-labelledby="heading_{{actu.id}}" data-bs-parent="#accordionExample">
+      <div class="accordion-body embedresize">
+          <iframe width="530" height="315" src="{{actu.link_yt}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra imperdiet orci, eu aliquet purus ornare a. Vivamus a dapibus lacus. Maecenas vulputate elit vel dui ornare fringilla. Nullam facilisis nisi ac massa malesuada pulvinar. Pellentesque ultrices et libero ullamcorper gravida. Suspendisse congue ex at lorem auctor feugiat. Curabitur scelerisque lacus dolor. Maecenas nec risus vestibulum, mattis nulla a, tincidunt orci. Nulla efficitur sed nisl eget finibus. Praesent molestie, leo sit amet sollicitudin vehicula, tellus erat laoreet ligula, ut sollicitudin lacus risus a libero. Nulla facilisi. Sed eu purus viverra, vulputate libero nec, rhoncus tortor. Vivamus vel luctus ex. Integer a ipsum id sapien congue porta. Maecenas non porta libero.
-  Integer massa dolor, aliquam venenatis cursus lacinia, ultricies quis nibh. Etiam ac lorem vel augue ultrices faucibus sit amet non diam. Nunc sit amet imperdiet massa. Morbi sodales ut urna sagittis pharetra. Nullam eu pharetra purus, nec tempus elit. Morbi vestibulum auctor sapien, vitae elementum ex viverra et. In ac elit odio. Etiam sit amet vestibulum enim. Aenean blandit ex vel libero placerat dictum et eu dolor. Aenean ut felis rhoncus, dapibus diam a, consequat dolor. Duis in nunc quis ante laoreet eleifend sed non ligula. Phasellus nec mattis diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  Phasellus feugior, aliquam venenatis cursus lacinia, ultricies quis nibh. Etiam ac lorem vel augue ultrices faucibus sit amet non diam. Nunc sit amet imperdiet massa. Morbi sodales ut urna sagittis pharetra. Nullam eu pharetra purus, nec tempus elit. Morbi vestibulum auctor sapien, vitae elementum ex viverra et. In ac elit odio. Etiam sit amet vestibulum enim. Aenean blandit ex vel libero placerat dictum et eu dolor. Aenean ut felis rhoncus, dapibus diam a, consequat dolor. Duis in nunc quis ante laoreet eleifend sed non ligula. Phasellus nec mattis diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  Pha Phasellus feugia Phasellus feugia Phasellus feugia Phasellus feugia Phasellus feugiasellus feugia consectetur adipiscing elit. Praesent pharetra imperdiet orci, eu aliquet purus ornare a. Vivamus a dapibus lacus. Maecenas vulputate elit vel dui ornare fringilla. Nullam facilisis nisi ac massa malesuada pulvinar. Pellentesque ultrices et libero ullamcorper gravida. Suspendisse congue ex at lorem auctor feugiat. Curabitur scelerisque lacus dolor. Maecenas nec risus vestibulum, mattis nulla a, tincidunt orci. Nulla efficitur sed nisl eget finibus. Praesent molestie, leo sit amet sollicitudin vehicula, tellus erat laoreet ligula, ut sollicitudin lacus risus a libero. Nulla facilisi. Sed eu purus viverra, vulputate libero nec, rhoncus tortor. Vivamus vel luctus ex. Integer a ipsum id sapien congue porta. Maecenas non porta libero.
-  Integer massa dolor, aliquam venenati Phasellus feugia Phasellus feugia Phasellus feugia Phasellus feugias cursus lacinia, ultricies quis nibh. Etiam ac lorem vel augue ultrices faucibus sit amet non diam. Nunc sit amet imperdiet massa. Morbi sodales ut urna sagittis pharetra. Nullam eu pharetra purus, nec tempus elit. Morbi vestibulum auctor sapien, vitae elementum ex viverra et. In ac elit odio. Etiam sit amet vestibulum enim. Aenean blandit ex vel libero placerat dictum et eu dolor. Aenean ut felis rhoncus, dapibus diam a, consequat dolor. Duis in nunc quis ante laoreet eleifend sed non ligula. Phasellus nec mattis diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  Phasellus feugiat fe Phasellusellus feugia Phasellus fesellus feugia Phasellus fesellus feugia Phasellus fesellus feugia Phasellus fes feugia Phasellus feugia Phasellus feugiaugiat lorem, eget aliquet sem egestas et. Suspendisse non mauris in ex sagittis ultricies a eu magna. Pellentesque et eleifend metus. Vivamus in nulla convallis, ultrices metus et, faucibus lectus. Nulla eget egestas enim, quis luctus arcu. Etiam ac augue id urna hendrerit vehicula sit amet vitae diam. Etiam in mollis eros. Ut vitae condimentum turpis, vitae congue nulla. Suspendisse ut lorem id ligula pharetra condimentum. Integer dictum sollicitudin massa. Vivamus vehicula laoreet suscipit.
-  Mauis tempus at dui nec feugiat. Pellentesque accumsan eros id nisl laoreet lacinia. Ut ac finibus dui. Phasellus ut sapien erat. Vivamus id lorem a tellus pharetra pulvinar in eget ligula. Donec at libero quis quam elementum semper at vel libero. Donec ut augue pharetra, vehicula justo at, malesuada neque. Nunc vitae felis nisl. Curabitur molestie urna non convallis vehicula. Nunc placerat ante id sem eleifend, in ultrices massa pharetra.</p>
+  {% endfor %}
+</div>
 
   {% endblock %}

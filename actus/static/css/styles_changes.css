@@ -163,7 +163,6 @@ background: #F44336;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     }
 
 .scroll_div{
@@ -205,4 +204,8 @@ background: #F44336;
     margin: auto;
     width: 400px;
     margin-bottom: 10px;
+}
+.not_dispo{
+    color: grey !important;
+    margin-left: 30px;
 }
