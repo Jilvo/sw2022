@@ -31,4 +31,6 @@ def suivre_function(request):
     """Render the Suivre page"""
     return render(request,"suivre.html")
 
-
+def legals_mentions(request):
+    """Render the Mentions Legales page"""
+    return render(request,"legals_mentions.html")

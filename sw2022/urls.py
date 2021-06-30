@@ -22,10 +22,11 @@ from manage_user import views as manage_user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("index", actus_views.home_function, name="index"),
+    path("", actus_views.home_function, name="index"),
     path("", include('manage_user.urls')),
     path("connaitre", actus_views.connaitre_function, name="connaitre"),
     path("suivre", actus_views.suivre_function, name="suivre"),
     path("contacte", manage_user_views.contact_function , name="contacte"),
+    path("mentions_legales", actus_views.legals_mentions, name="mentions_legales")
 
 ]
