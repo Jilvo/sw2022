@@ -15,14 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
 
 from actus import views as actus_views
+from manage_user import views as manage_user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("index", actus_views.home_function, name="index"),
+    path("", include('manage_user.urls')),
     path("connaitre", actus_views.connaitre_function, name="connaitre"),
     path("suivre", actus_views.suivre_function, name="suivre"),
-    path("contact", actus_views.contact_function , name="contact"),
+    path("contacte", manage_user_views.contact_function , name="contacte"),
 
 ]

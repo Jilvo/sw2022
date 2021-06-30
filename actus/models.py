@@ -11,6 +11,10 @@ class Savoir(models.Model):
     link_pdf = models.CharField(max_length=100)
     ouvert_par_defaut = models.CharField(max_length=10, default="",blank=True)
     disponible = models.BooleanField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+         ordering = ['created_at']
+         
     def __str__(self):
         return self.title

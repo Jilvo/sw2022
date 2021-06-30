@@ -200,10 +200,12 @@ background: #F44336;
     margin-right: 20px;
 }
 .contact_send{
-    display: flow-root;
     margin: auto;
     width: 400px;
     margin-bottom: 10px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .not_dispo{
     color: grey !important;
