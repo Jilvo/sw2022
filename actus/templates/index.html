@@ -17,16 +17,19 @@
               <p class="home_article">{{actu.date}}</p>
               <p class="home_article">></p>
               <p class="home_article">{{actu.title}}</p>
-              <a href=""><i class="fas fa-play fa-2x button_home_article"></i></a>
-              <a href={{actu.link_pdf}} target="_blank"><i class="fas fa-file-pdf fa-2x button_home_article"></i></a>
+              <!-- <a href=""><i class="fas fa-play fa-2x button_home_article"></i></a> -->
+              <!-- <a href={{actu.link_pdf}} target="_blank"><i class="fas fa-file-pdf fa-2x button_home_article"></i></a> -->
               <!-- <a href="{% static 'assets/buttons/sw.pdf' %}" target="_blank"><img class="button_home_article" src="{% static 'assets/buttons/share.png' %}"></a> -->
           </div>
       </button>
     </h2>
-    <div id="collapse_{{actu.id}}" class="accordion-collapse collapse {{actu.ouvert_par_defaut}} " aria-labelledby="heading_{{actu.id}}" data-bs-parent="#accordionExample">
-      <div class="accordion-body embedresize">
-          <iframe width="530" height="315" src="{{actu.link_yt}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+    <div id="collapse_{{actu.id}}" class="home_column accordion-collapse collapse {{actu.ouvert_par_defaut}} " aria-labelledby="heading_{{actu.id}}" data-bs-parent="#accordionExample">
+      <div style="display: inline-table;" class="accordion-body embedresize">
+          <iframe style="    width: 40vw;
+          height: 22.5vw;" class="yt_video" src="{{actu.link_yt}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+    </div>
+      <button type="button" class="btn btn-outline-primary button_connaitre"><a class="link_hidden" href={{actu.link_pdf}}>Voir le PDF</a></button>
     </div>
   </div>
 
