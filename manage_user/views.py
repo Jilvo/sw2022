@@ -9,6 +9,7 @@ def contact_function(request):
     return render(request,"contact.html")
 
 def contactView(request):
+    
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -18,7 +19,7 @@ def contactView(request):
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, from_email, ['admin@example.com'])
+                send_mail(subject, message, 'jmillot41@hotmail.fr', [from_email])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')

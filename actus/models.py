@@ -39,6 +39,7 @@ class Agendasuivre(models.Model):
     title = models.CharField(max_length=150)
     lieu = models.CharField(max_length=50,blank=True)
     date = models.CharField(max_length=50,blank=True)
+    heure = models.CharField(max_length=50,blank=True)
     message = models.CharField(max_length=200,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
@@ -47,3 +48,16 @@ class Agendasuivre(models.Model):
          
     def __str__(self):
         return self.title
+
+class Newsletter_model(models.Model):
+    """List of the User who receive the Newsletter"""
+    email = models.CharField(max_length=150)
+    date = models.DateTimeField(auto_now_add=True)
+    subscribed = models.BooleanField(default=True)
+
+    class Meta:
+         ordering = ['date']
+         
+    def __str__(self):
+        return self.email
+
