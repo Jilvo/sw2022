@@ -24,19 +24,19 @@
         </div>
        {% endfor %}
     </div>
-    <div class="link_suivre">
-        <p style="text-align: center;" class="home_article size_title">Agendas</p>
-        {% for agenda in agenda_suivre %}
-        <div>
-            <p style="font-size: 1vw;" class="home_article size_article">{{agenda.title}}</p>
-            <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.date}} •</p>
-            <p style="margin-left: 1vw;">• {{agenda.lieu}} •</p>
-        </div>
-       {% endfor %}
+<div class="link_suivre">
+    <p style="text-align: center;" class="home_article size_title">Agendas</p>
+    {% for agenda in agenda_suivre %}
+    <div>
+        <p style="font-size: 1vw;" class="home_article size_article">{{agenda.title}}</p>
+        <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.date}} •</p>
+        <p style="margin-left: 1vw;">• {{agenda.lieu}} •</p>
     </div>
-    <div style="margin: 100px;">
-        <a class="twitter-timeline" data-lang="fr" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/StephWendlinger?ref_src=twsrc%5Etfw">Tweets by StephWendlinger</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+    {% endfor %}
+</div>
+<div style="margin: 100px;">
+    <a class="twitter-timeline" data-lang="fr" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/StephWendlinger?ref_src=twsrc%5Etfw">Tweets by StephWendlinger</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
     
 
 </div>

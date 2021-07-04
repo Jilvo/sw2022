@@ -296,3 +296,31 @@ background: #F44336;
 .size_article{
     font-size: large !important;
 }
+.participer_flex{
+    text-align: center;
+    margin: 15px auto;
+}
+.div_participer{
+    display: inline-block;
+    text-align: left;
+    /* width: 40%; */
+    height: 500px;
+    /* margin: 100px; */
+    box-shadow: rgb(0 0 0 / 26%) 0px 20px 20px 0px;
+    overflow: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-right: 1%;
+}
+.participer_title{
+    text-align: center;
+}
+.button_display{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.form_signup{
+    margin-bottom: 10px !important;
+}

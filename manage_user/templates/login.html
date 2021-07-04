@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!--Custom styles-->
+<title>Création de Compte</title>
+<body id="page-top" class="signup"></body>
+<style>
+	footer{
+		position: fixed;
+	}
+    body{
+        background-color: #1757b5c4 !important;
+    }
+</style>
+
+<div class="container mt-5 ">
+    <div class="row d-flex justify-content-center ">
+        <div class="col-md-6">
+            <div class="card p-4 py-5 div_participer">
+                <h2>Connexion</h2>
+                <div class="d-flex flex-row"> <span class="mr-2">Vous n'avez pas de compte ? </span> <a href="#" style="margin-left: 1em;"class="signin-link">Enregistrez vous ici</a> </div>
+                <div class="signup mt-3"> <input type="text" name="" class="form-control form_signup" placeholder="Email"> 
+                    <input type="text" name="" class="form-control form_signup" placeholder="Mot de passe"> </div>
+                <div class="mt-4"> <button class="btn btn-danger button btn-block">Se connecter</button> </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

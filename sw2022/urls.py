@@ -29,5 +29,10 @@ urlpatterns = [
     path("contacte", manage_user_views.contact_function , name="contacte"),
     path("mentions_legales", actus_views.legals_mentions, name="mentions_legales"),
     path("join_newsletter", actus_views.join_newsletter, name="join_newsletter"),
+    path("participer" , manage_user_views.connaitre_function, name="participer"),
+    path("login", manage_user_views.connexion, name="login"),
+    path("signup", manage_user_views.register, name="signup"),
+    path("login_page",manage_user_views.signin_function,name="login_page"),
+    path("logout", manage_user_views.logout_view, name="logout"),
 
 ]
