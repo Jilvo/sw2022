@@ -34,5 +34,7 @@ urlpatterns = [
     path("signup", manage_user_views.register, name="signup"),
     path("login_page",manage_user_views.signin_function,name="login_page"),
     path("logout", manage_user_views.logout_view, name="logout"),
+    path("mon_compte", manage_user_views.my_account_function ,name="mon_compte"),
+    path("modify_account", manage_user_views.modify_account_function ,name="modify_account"),
 
 ]

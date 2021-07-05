@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<img class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+
+<section class="bg_footer page-section product " id="choice">
+    <div>
+        <h3 class="center_text margin_bottom">Espace Compte :</h3>
+        <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+        <button type="submit" value="logout" class="btn btn-primary btn-lg" id="logout">Déconnexion</button>
+        </form>
+    
+        <form action="{% url 'modify_account' %}" method="GET">
+            {% csrf_token %}
+        <div class="center_text">Vous pouvez modifier des informations ici : </div>
+        <div class="my_account_flex">
+            <p class="my_account">Email</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user.email}}" placeholder='{{user.email}}' name='change_mail' id='change_mail'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Mot de Passe</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user.password}}" placeholder='{{user.password}}' name='change_password' id='change_password'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Nom</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user.last_name}}" placeholder='{{user.last_name}}' name='change_last_name' id='change_last_name'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Prénom</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user.first_name}}" placeholder='{{user.first_name}}' name='change_first_name' id='change_first_name'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Âge</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.age}}" placeholder='{{user_online.age}}' name='change_age' id='change_age'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Profession</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.profession}}" placeholder='{{user_online.profession}}' name='change_profession' id='change_profession'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Adresse</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.adresse}}" placeholder='{{user_online.adresse}}' name='change_adresse' id='change_adresse'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Code Postal</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.code_postal}}" placeholder='{{user_online.code_postal}}' name='change_code_postal' id='change_code_postal'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Commune</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.commune}}" placeholder='{{user_online.commune}}' name='change_commune' id='change_commune'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Pays</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.pays}}" placeholder='{{user_online.pays}}' name='change_pays' id='change_pays'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Telephone</p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.telephone}}" placeholder='{{user_online.telephone}}' name='change_telephone' id='change_telephone'>
+        </div>
+        <div class="my_account_flex">
+            <p class="my_account">Êtes vous Elu? Si oui, quel est votre fonction ? </p>
+            <input style="width: 200px;" class='form-control mr-sm-2 input_recipe recipe_input autocomplete-lunch align' value="{{user_online.fonction_elu}}" placeholder='{{user_online.fonction_elu}}' name='change_fonction_elu' id='change_fonction_elu'>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+    </div>
+</section>
+{% endblock %}

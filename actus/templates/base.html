@@ -2,7 +2,7 @@
 <!DOCTYPE html>
     <html lang="fr">
         <head>
-            <link rel="icon" type="image/png" href="{% static 'assets/logo.png' %}" />
+            <link rel="icon" type="image/png" href="{% static 'assets/logo_couleur.jpg' %}" />
             <link rel="stylesheet" href="{% static 'css/styles.css' %}">
             <link rel="stylesheet" href="{% static 'css/styles_changes.css' %}">
             <script src="{% static 'js/scripts.js' %}"></script>
@@ -39,12 +39,12 @@
                             <a class="nav-link yellow_title shadow_title montserrat" href="participer">PARTICIPER</a>
                         </li>
                         <li style="text-align: center;">
-                            <i style="margin-top: 10px; margin-right: 20px;" class="fas fa-microphone fa-2x yellow_title"></i>
-                            <i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title"></i>
+                            <a href=""><i style="margin-top: 10px; margin-right: 20px;" class="fas fa-microphone fa-2x yellow_title" title="Ecouter les podcast"></i></a>
+                            <a href="contacte"><i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user}}</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="mon_compte">BONJOUR, {{user}}</a>
                         </li>
                         {% else %}
                         {% endif %}

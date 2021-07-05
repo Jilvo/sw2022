@@ -4,13 +4,13 @@
 
 <div style="flex-direction: column;" class="flex">
     <form action="{% url 'join_newsletter' %}" method="GET">
-    <p style="text-align: center;" class="home_article size_article">S'inscrire à la newsletter</p>
+    <!-- <p style="text-align: center;" class="home_article size_article">S'inscrire à la newsletter</p> -->
         <div style="margin-left: auto;
-        margin-right: auto;"class="col-sm-10">
+        margin-right: auto; margin-top: 20px;"class="col-sm-10">
           <input type="email" class="form-control" id="email" placeholder="Quel est votre adresse mail ?" name="email">
         </div>
-        <div class="text-center"> 
-            <button type="submit" class="btn btn-primary contact_send ">S'inscrire</button>
+        <div style="margin-top: 20px;"class="text-center"> 
+            <button type="submit" class="btn btn-outline-primary button_connaitre contact_send ">S'inscrire à la newsletter</button>
         </div>
 </form>
 </div>
@@ -29,13 +29,14 @@
     {% for agenda in agenda_suivre %}
     <div>
         <p style="font-size: 1vw;" class="home_article size_article">{{agenda.title}}</p>
-        <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.date}} •</p>
+        <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.heure}} •</p>
         <p style="margin-left: 1vw;">• {{agenda.lieu}} •</p>
+        <p style="margin-left: 1vw;">• {{agenda.ville}} •</p>
     </div>
     {% endfor %}
 </div>
 <div style="margin: 100px;">
-    <a class="twitter-timeline" data-lang="fr" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/StephWendlinger?ref_src=twsrc%5Etfw">Tweets by StephWendlinger</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" data-lang="fr" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/StephWendlinger?ref_src=twsrc%5Etfw">StephWendlinger</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
     
 

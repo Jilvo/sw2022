@@ -304,6 +304,7 @@ background: #F44336;
     display: inline-block;
     text-align: left;
     /* width: 40%; */
+    width: 500px;
     height: 500px;
     /* margin: 100px; */
     box-shadow: rgb(0 0 0 / 26%) 0px 20px 20px 0px;
@@ -323,4 +324,27 @@ background: #F44336;
 }
 .form_signup{
     margin-bottom: 10px !important;
+}
+.center_text{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Merriweather Sans", -apple-system, "Segoe UI Symbol";
+    margin-top: 0.2em;
+    font-size: 2em;
+    text-align: center;
+
+}
+
+.my_account{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+.my_account_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
 }

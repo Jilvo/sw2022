@@ -37,7 +37,8 @@ class Agendasuivre(models.Model):
     """Actusuivre class"""
 
     title = models.CharField(max_length=150)
-    lieu = models.CharField(max_length=50,blank=True)
+    lieu = models.CharField(max_length=100,blank=True)
+    ville = models.CharField(max_length=50,blank=True)
     date = models.CharField(max_length=50,blank=True)
     heure = models.CharField(max_length=50,blank=True)
     message = models.CharField(max_length=200,blank=True)

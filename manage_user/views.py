@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.hashers import check_password
 from .forms import ConnexionForm, RegistrationForm
+from .models import RegisteredUser
 # Create your views here.
 
 def contact_function(request):
@@ -14,7 +15,16 @@ def contact_function(request):
     return render(request,"contact.html")
 
 def connaitre_function(request):
+    """Render the Participer page"""
     return render(request,"participer.html")
+
+def my_account_function(request):
+    """Render the Account page"""
+    user_online = request.user
+    user_login = RegisteredUser.objects.get(user=user_online)
+    context={"user_online": user_login}
+    print(user_login.age)
+    return render(request,"account.html",context)
 
 def contactView(request):
     
@@ -27,7 +37,7 @@ def contactView(request):
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, 'jmillot41@hotmail.fr', [from_email,'jmillot41@hotmail.fr'])
+                send_mail(subject, message, 'jmillot41@hotmail.fr', [from_email])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
@@ -94,6 +104,22 @@ def connexion(request):
     else:
         context = {"ConnexionForm": ConnexionForm()}
         return render(request, "login.html", context)
+
+def modify_account_function(request):
+    list_data = ["change_age","change_profession","change_adresse","change_code_postal","change_commune","change_pays","change_telephone","change_fonction_elu"]
+    list_to_change = ["age","profession","adresse","code_postal","commune","pays","telephone","fonction_elu"]
+    for data,change in zip(list_data,list_to_change):
+        query = request.GET.get(data)
+        # print(query)
+        # print(data)
+        # print(change)
+        user_account = request.user
+        query_2 = RegisteredUser.objects.get(user=user_account)
+        query_2.change = query
+        print(query)
+        query_2.save()
+
+    return render(request, "account.html")
 
 
 def logout_view(request):
