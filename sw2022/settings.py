@@ -41,8 +41,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
    
 ]
+SENDGRID_API_KEY = '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'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 DEFAULT_FROM_EMAIL = 'jmillot41@hotmail.fr'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net' # new
+EMAIL_HOST_USER = 'apikey' # new
+EMAIL_HOST_PASSWORD = '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' # new
+EMAIL_PORT = 587 # new
+EMAIL_USE_TLS = True # new
+
+# DEFAULT_FROM_EMAIL = 'jmillot41@hotmail.fr'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
