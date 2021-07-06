@@ -2,17 +2,21 @@
 {% load static %}
 {% block content %}
 
-<p> Pour participer à la campagne et soutenir la candidature de Stéphane Wendligner, inscriveez vous. Les données recueillies ne seront utilisées par les personnes dûment autorisées que le temps
+<p style="margin-top: 78px;"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendligner, inscriveez vous. Les données recueillies ne seront utilisées par les personnes dûment autorisées que le temps
     de la campagne ; elles seront ensuite détruites. En aucun cas , elle ne seront vendues ou échangées. <a href=""> En savoir plus</a>
 </p>
 {% if user.is_authenticated %}
+<form action="{% url 'logout' %}" method="POST">
+  {% csrf_token %}
+<button style="margin-top: 10px;" type="submit" value="logout" class="btn btn-outline-primary button_connaitre contact_send" id="logout">Déconnexion</button>
+</form>
 <!-- <li class="nav-item">
     <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user}}</a>
 </li> -->
 {% else %}
 <div class="button_display">
-    <button type="button" class="btn btn-primary btn-lg"><a class="link_hidden" href="login">Connexion</a></button>
-    <button type="button" class="btn btn-secondary btn-lg"><a class="link_hidden" href="signup">S'inscrire</a></button>
+    <a class="link_hidden" href="login"><button type="button" class="btn btn-primary btn-lg">Connexion</button></a>
+    <a class="link_hidden" href="signup"><button type="button" class="btn btn-secondary btn-lg">S'inscrire</button></a>
     </div>
 {% endif %}
 <div class="participer_flex">
@@ -24,6 +28,7 @@
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
               Je veux adhérer au comité de soutien
+              <!-- {{user_online.soutien}} -->
             </label>
           </div>
         <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button>
@@ -35,7 +40,8 @@
         <div style="margin: auto;width: 50%;" class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
-              Je rejoindre l'équipe de campagne
+              Je rejoins l'équipe de campagne
+              <!-- {{user_online.campagne}} -->
             </label>
           </div>
         <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button>
@@ -44,11 +50,21 @@
         <p class="home_article size_title participer_title">Faire un don</p>
         <p style="text-align: center;">Venez nous excuser pour ce retard. Actuellement, le seul moyen de soutenir Stephane Wendlinger 
             est en envoyant un chéque à l'adresse suivante : </p>
-        <div style="margin: auto;width: 50%;" class="form-check">
+      <div style="flex-direction: row;
+      justify-content: space-around;" class="flex">
+        <div style="font-weight: 700;" class="form-check">
+            Actuel : <br>
             Association SW2022<br>
             1 montée du Château<br>
             07100 Annonay
           </div>
+        <div>
+          A venir :<br>
+          Virement Paypal<br>
+          Don par carte banquaire<br>
+          Virement SEPA<br> 
+        </div>
+      </div>
         <!-- <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button> -->
     </div>
     <div class="div_participer">
@@ -59,6 +75,7 @@
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
               Je suis élu et je souhaite parrainer le candidat
+              <!-- {{user_online.elu}} -->
             </label>
           </div>
         <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button>

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rsv+p3xaj1mwe%kncjssi4tf-p7$2vk@kd9g$+vt@t8u15sma9'
+ENV = os.environ.get("ENV")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1']
-
+if ENV == 'PRODUCTION':
+    DEBUG = False
+    ALLOWED_HOSTS = ['163.172.188.251']
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -41,16 +45,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
    
 ]
-SENDGRID_API_KEY = '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'
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-DEFAULT_FROM_EMAIL = 'jmillot41@hotmail.fr'
+DEFAULT_FROM_EMAIL = 'communication@sw2022.fr'
 EMAIL_HOST = 'smtp.sendgrid.net' # new
 EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = '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' # new
+EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY") # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
 
-# DEFAULT_FROM_EMAIL = 'jmillot41@hotmail.fr'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
@@ -94,6 +97,7 @@ DATABASES = {
         "USER": "postgres",
         "PASSWORD": "root",
         "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -135,8 +139,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = str(BASE_DIR / "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

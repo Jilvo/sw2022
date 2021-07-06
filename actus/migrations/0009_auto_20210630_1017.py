@@ -7,18 +7,20 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actus', '0008_alter_savoir_ouvert_par_defaut'),
+        ("actus", "0008_alter_savoir_ouvert_par_defaut"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='savoir',
-            options={'ordering': ['created_at']},
+            name="savoir",
+            options={"ordering": ["created_at"]},
         ),
         migrations.AddField(
-            model_name='savoir',
-            name='created_at',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            model_name="savoir",
+            name="created_at",
+            field=models.DateTimeField(
+                auto_now_add=True, default=django.utils.timezone.now
+            ),
             preserve_default=False,
         ),
     ]

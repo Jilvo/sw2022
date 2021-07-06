@@ -2,13 +2,15 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 
+
 class ContactForm(forms.Form):
     subject = forms.CharField(required=True)
     from_email = forms.EmailField(required=True)
     message = forms.CharField(widget=forms.Textarea, required=True)
 
+
 class ConnexionForm(AuthenticationForm):
-    """ Form to log an User model, this form is passed to the login view"""
+    """Form to log an User model, this form is passed to the login view"""
 
     class Meta:
         model = User

@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div style="flex-direction: column;" class="flex">
+<div style="flex-direction: column; margin-top: 78px;" class="flex">
     <form action="{% url 'join_newsletter' %}" method="GET">
     <!-- <p style="text-align: center;" class="home_article size_article">S'inscrire à la newsletter</p> -->
         <div style="margin-left: auto;
@@ -35,8 +35,11 @@
     </div>
     {% endfor %}
 </div>
-<div style="margin: 100px;">
-    <a class="twitter-timeline" data-lang="fr" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/StephWendlinger?ref_src=twsrc%5Etfw">StephWendlinger</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="link_suivre">
+    <p style="text-align: center;" class="home_article size_title">Twitter</p>
+    <div style="margin-top: 10px; margin-left: 100px; margin-right: 100px;">
+        <a class="twitter-timeline" data-lang="fr" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/StephWendlinger?ref_src=twsrc%5Etfw">StephWendlinger</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 </div>
     
 

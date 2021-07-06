@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actus', '0010_auto_20210630_2224'),
+        ("actus", "0010_auto_20210630_2224"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='agendasuivre',
-            name='heure',
+            model_name="agendasuivre",
+            name="heure",
             field=models.CharField(blank=True, max_length=50),
         ),
     ]

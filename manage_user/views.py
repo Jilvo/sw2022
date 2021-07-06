@@ -8,43 +8,53 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.hashers import check_password
 from .forms import ConnexionForm, RegistrationForm
 from .models import RegisteredUser
+
 # Create your views here.
+
 
 def contact_function(request):
     """Render the Contact page"""
-    return render(request,"contact.html")
+    return render(request, "contact.html")
+
 
 def connaitre_function(request):
     """Render the Participer page"""
-    return render(request,"participer.html")
+    # user_online = request.user
+    # user_login = RegisteredUser.objects.get(user=user_online)
+    # context={"user_online": user_login}
+    return render(request, "participer.html")
+
 
 def my_account_function(request):
     """Render the Account page"""
     user_online = request.user
     user_login = RegisteredUser.objects.get(user=user_online)
-    context={"user_online": user_login}
+    context = {"user_online": user_login}
     print(user_login.age)
-    return render(request,"account.html",context)
+    return render(request, "account.html", context)
+
 
 def contactView(request):
-    
-    if request.method == 'GET':
+
+    if request.method == "GET":
         form = ContactForm()
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
+            subject = form.cleaned_data["subject"]
+            from_email = form.cleaned_data["from_email"]
+            message = form.cleaned_data["message"]
             try:
-                send_mail(subject, message, 'jmillot41@hotmail.fr', [from_email])
+                send_mail(subject, message, "communication@sw2022.fr", [from_email])
             except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
-    return render(request, "email.html", {'form': form})
+                return HttpResponse("Invalid header found.")
+            return redirect("success")
+    return render(request, "email.html", {"form": form})
+
 
 def successView(request):
-    return HttpResponse('Success! Thank you for your message.')
+    return HttpResponse("Success! Thank you for your message.")
+
 
 # Create your views here.
 def signin_function(request):
@@ -58,7 +68,7 @@ def signup_function(request):
 
 
 def register(request):
-    """function for create a account """
+    """function for create a account"""
     if request.method == "GET":
         return render(request, "signup.html")
     if request.method == "POST":
@@ -92,9 +102,7 @@ def connexion(request):
         print(username)
         print(password)
 
-        user = authenticate(
-            username=username, password=password
-        )
+        user = authenticate(username=username, password=password)
         print(user)
         if user is not None:  # Si l'objet renvoyé n'est pas None
             login(request, user)  # nous connectons l'utilisateur
@@ -105,10 +113,29 @@ def connexion(request):
         context = {"ConnexionForm": ConnexionForm()}
         return render(request, "login.html", context)
 
+
 def modify_account_function(request):
-    list_data = ["change_age","change_profession","change_adresse","change_code_postal","change_commune","change_pays","change_telephone","change_fonction_elu"]
-    list_to_change = ["age","profession","adresse","code_postal","commune","pays","telephone","fonction_elu"]
-    for data,change in zip(list_data,list_to_change):
+    list_data = [
+        "change_age",
+        "change_profession",
+        "change_adresse",
+        "change_code_postal",
+        "change_commune",
+        "change_pays",
+        "change_telephone",
+        "change_fonction_elu",
+    ]
+    list_to_change = [
+        "age",
+        "profession",
+        "adresse",
+        "code_postal",
+        "commune",
+        "pays",
+        "telephone",
+        "fonction_elu",
+    ]
+    for data, change in zip(list_data, list_to_change):
         query = request.GET.get(data)
         # print(query)
         # print(data)

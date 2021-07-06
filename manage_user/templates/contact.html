@@ -3,7 +3,7 @@
 {% block content %}
 
 <div>
-    <p style="text-align: center;" class="home_article"> Vous pouvez nous contacter ici</p>
+    <p style="text-align: center; margin-top: 78px;" class="home_article"> Vous pouvez nous contacter ici</p>
     <form class="contact_form" action="{% url 'contact' %}" method="POST">
       {% csrf_token %}
         <div class="row mb-3">

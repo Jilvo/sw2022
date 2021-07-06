@@ -2,14 +2,14 @@
 {% load static %}
 {% block content %}
 
-<img class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<img style="margin-top: 78px;"class="banner" src="{% static 'assets/banner_crop.jpg' %}">
 
 <section class="bg_footer page-section product " id="choice">
     <div>
         <h3 class="center_text margin_bottom">Espace Compte :</h3>
         <form action="{% url 'logout' %}" method="POST">
             {% csrf_token %}
-        <button type="submit" value="logout" class="btn btn-primary btn-lg" id="logout">Déconnexion</button>
+            <button style="margin-top: 10px;" type="submit" value="logout" class="btn btn-outline-primary button_connaitre contact_send" id="logout">Déconnexion</button>
         </form>
     
         <form action="{% url 'modify_account' %}" method="GET">

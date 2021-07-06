@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<img class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<img style="margin-top: 78px;" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
 <div>
   {% for actu_p in actus_pas_dispo %}
   <p class="home_article not_dispo">{{actu_p.date}} > {{actu_p.title}}</p>
@@ -16,7 +16,10 @@
           <div class="flex flex_row">
               <p class="home_article">{{actu.date}}</p>
               <p class="home_article">></p>
+              <div>
               <p class="home_article">{{actu.title}}</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at cursus velit, a pulvinar ex. Pellentesque bibendum ut dolor quis imperdiet. Aliquam erat volutpat. Nulla non hendrerit nisl. Nullam tempor a turpis eget rhoncus. </p>
+            </div>
               <!-- <a href=""><i class="fas fa-play fa-2x button_home_article"></i></a> -->
               <!-- <a href={{actu.link_pdf}} target="_blank"><i class="fas fa-file-pdf fa-2x button_home_article"></i></a> -->
               <!-- <a href="{% static 'assets/buttons/sw.pdf' %}" target="_blank"><img class="button_home_article" src="{% static 'assets/buttons/share.png' %}"></a> -->

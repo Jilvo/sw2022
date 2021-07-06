@@ -18,7 +18,7 @@
         </head>
 
         <!-- Navbar -->
-        <nav style="justify-content: center;"class="navbar navbar-expand-lg navbar-dark bg_nav_bar">
+        <nav style="justify-content: center;"class="navbar navbar-expand-lg navbar-dark bg_nav_bar bg_fixed">
             <a style="font-size: 30px!important;" class="navbar-brand logo_position yellow_title shadow_title" href="/"><img style="width: 50px;"src="{% static 'assets/logo.png' %}"></a>
             <div class="container">
                 <button style="margin-top: 5px;" class="navbar-toggler button_hamburger" type="button" data-toggle="collapse" data-target="#navbar10">
@@ -27,18 +27,18 @@
                 <div class="navbar-collapse collapse" id="navbar10">
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="/">SAVOIR</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="/" id="savoir">SAVOIR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="connaitre">CONNAÎTRE</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="connaitre" id="connaitre">CONNAÎTRE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="suivre">SUIVRE</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="suivre" id="suivre">SUIVRE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="participer">PARTICIPER</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="participer" id="participer">PARTICIPER</a>
                         </li>
-                        <li style="text-align: center;">
+                        <li style="text-align: center;margin-top: -7px;">
                             <a href=""><i style="margin-top: 10px; margin-right: 20px;" class="fas fa-microphone fa-2x yellow_title" title="Ecouter les podcast"></i></a>
                             <a href="contacte"><i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
                         </li>
@@ -52,14 +52,14 @@
                 </div>
             </div>
         </nav>
-
+        <body>
         {% block content %} {% endblock %}
         <!-- Footer -->
+        </body>
         <footer class="text-center text-lg-start ">
             <div style="margin: 0 auto;" class="text-center p-3 ">
-              <a href="mentions_legales">Mentions légales</a>
-              <a href="contacte">Contact</a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="montserrat" href="mentions_legales">Mentions légales</a>
+              <a class="montserrat" href="contacte">Contact</a>
                 <a href="https://twitter.com/StephWendlinger"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>

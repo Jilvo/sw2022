@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actus', '0006_alter_savoir_disponible'),
+        ("actus", "0006_alter_savoir_disponible"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='savoir',
-            name='disponible',
+            model_name="savoir",
+            name="disponible",
             field=models.BooleanField(),
         ),
         migrations.AlterField(
-            model_name='savoir',
-            name='ouvert_par_defaut',
-            field=models.CharField(default='', max_length=10, null=True),
+            model_name="savoir",
+            name="ouvert_par_defaut",
+            field=models.CharField(default="", max_length=10, null=True),
         ),
     ]

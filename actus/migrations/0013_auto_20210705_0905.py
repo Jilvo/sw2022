@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actus', '0012_newsletter_model'),
+        ("actus", "0012_newsletter_model"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='agendasuivre',
-            name='ville',
+            model_name="agendasuivre",
+            name="ville",
             field=models.CharField(blank=True, max_length=50),
         ),
         migrations.AlterField(
-            model_name='agendasuivre',
-            name='lieu',
+            model_name="agendasuivre",
+            name="lieu",
             field=models.CharField(blank=True, max_length=100),
         ),
     ]

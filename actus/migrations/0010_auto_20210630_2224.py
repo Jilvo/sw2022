@@ -6,45 +6,61 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actus', '0009_auto_20210630_1017'),
+        ("actus", "0009_auto_20210630_1017"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Actusuivre',
+            name="Actusuivre",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=150)),
-                ('link', models.CharField(blank=True, max_length=200)),
-                ('date', models.CharField(blank=True, max_length=50)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=150)),
+                ("link", models.CharField(blank=True, max_length=200)),
+                ("date", models.CharField(blank=True, max_length=50)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
             ],
             options={
-                'ordering': ['created_at'],
+                "ordering": ["created_at"],
             },
         ),
         migrations.CreateModel(
-            name='Agendasuivre',
+            name="Agendasuivre",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=150)),
-                ('lieu', models.CharField(blank=True, max_length=50)),
-                ('date', models.CharField(blank=True, max_length=50)),
-                ('message', models.CharField(blank=True, max_length=200)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=150)),
+                ("lieu", models.CharField(blank=True, max_length=50)),
+                ("date", models.CharField(blank=True, max_length=50)),
+                ("message", models.CharField(blank=True, max_length=200)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
             ],
             options={
-                'ordering': ['created_at'],
+                "ordering": ["created_at"],
             },
         ),
         migrations.AlterField(
-            model_name='savoir',
-            name='link_pdf',
+            model_name="savoir",
+            name="link_pdf",
             field=models.CharField(blank=True, max_length=100),
         ),
         migrations.AlterField(
-            model_name='savoir',
-            name='link_yt',
+            model_name="savoir",
+            name="link_yt",
             field=models.CharField(blank=True, max_length=200),
         ),
     ]

@@ -10,6 +10,7 @@
 }
 .montserrat{
     font-family: var(--montserrat) !important;
+    font-weight: bold !important;
 }
 
 footer
@@ -67,8 +68,13 @@ footer a:hover
     display: flex;
 }
 .bg_nav_bar{
-    background-color: var(--bleuvert);
-    
+    background-color: var(--bleuvert);   
+}
+.bg_fixed{
+    overflow: hidden;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
 }
 .logo_position{
     /* left: 0;
@@ -313,6 +319,9 @@ background: #F44336;
     margin-top: 50px;
     margin-right: 1%;
 }
+.div_signup{
+    height: 400px !important;
+}
 .participer_title{
     text-align: center;
 }
@@ -353,3 +362,11 @@ background: #F44336;
     color: #014c8c;
     text-decoration: underline;
 } */
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(186 77 94 / 25%) !important;
+}
+.accordion-button:not(.collapsed) {
+    color: rgb(186,77,94) !important;
+
+}
