@@ -21,13 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-ENV = os.environ.get("ENV")
-SECRET_KEY = os.environ.get("SECRET_KEY")
+ENV = 'PRODUCTION'
+SECRET_KEY = 'django-insecure-rsv+p3xaj1mwe%kncjssi4tf-p7$2vk@kd9g$+vt@t8u15sma9'
+# ENV = os.environ.get("ENV")
+# SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if ENV == 'PRODUCTION':
     DEBUG = False
-    ALLOWED_HOSTS = ['163.172.188.251']
+    ALLOWED_HOSTS = ['163.172.188.251','127.0.0.1']
 else:
     DEBUG = True
     ALLOWED_HOSTS = ['127.0.0.1']
@@ -45,12 +47,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
    
 ]
-SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+SENDGRID_API_KEY = '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'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 DEFAULT_FROM_EMAIL = 'communication@sw2022.fr'
 EMAIL_HOST = 'smtp.sendgrid.net' # new
 EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY") # new
+EMAIL_HOST_PASSWORD = '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' # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
 
@@ -97,7 +99,6 @@ DATABASES = {
         "USER": "postgres",
         "PASSWORD": "root",
         "HOST": "localhost",
-        "PORT": "5432",
     }
 }
 

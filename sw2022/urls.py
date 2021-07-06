@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", actus_views.home_function, name="index"),
     path("", include('manage_user.urls')),
+    path("404", manage_user_views.page_not_found_view, name="404"),
+    path("500", manage_user_views.page_internal_error, name="500"),
     path("connaitre", actus_views.connaitre_function, name="connaitre"),
     path("suivre", actus_views.suivre_function, name="suivre"),
     path("contacte", manage_user_views.contact_function , name="contacte"),

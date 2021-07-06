@@ -11,6 +11,15 @@ from .models import RegisteredUser
 
 # Create your views here.
 
+def page_not_found_view(request):
+    """display the HTML code 404 page"""
+    return render(request, "404.html")
+
+
+def page_internal_error(request):
+    """display the HTML code 500 page"""
+    return render(request, "500.html")
+
 
 def contact_function(request):
     """Render the Contact page"""
