@@ -305,7 +305,7 @@ background: #F44336;
     text-align: left;
     /* width: 40%; */
     width: 500px;
-    height: 500px;
+    height: 300px;
     /* margin: 100px; */
     box-shadow: rgb(0 0 0 / 26%) 0px 20px 20px 0px;
     overflow: auto;
@@ -348,3 +348,8 @@ background: #F44336;
     justify-content: center;
     margin-bottom: 30px;
 }
+
+/* a:focus, a:hover {
+    color: #014c8c;
+    text-decoration: underline;
+} */
