@@ -2,8 +2,15 @@
 {% load static %}
 {% block content %}
 
-<p style="margin-top: 78px;"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendligner, inscriveez vous. Les données recueillies ne seront utilisées par les personnes dûment autorisées que le temps
-    de la campagne ; elles seront ensuite détruites. En aucun cas , elle ne seront vendues ou échangées. <a href=""> En savoir plus</a>
+<p style="    margin-top: 78px;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid #ced4da;
+border-radius: 10px;
+padding-top: 10px;
+padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendligner, inscriveez vous. Les données recueillies ne seront utilisées par les personnes dûment autorisées que le temps
+    de la campagne ; elles seront ensuite détruites. En aucun cas , elle ne seront vendues ou échangées. <a href="contact"> En savoir plus</a>
 </p>
 {% if user.is_authenticated %}
 <form action="{% url 'logout' %}" method="POST">
@@ -22,35 +29,30 @@
 <div class="participer_flex">
     <div class="div_participer">
         <p class="home_article size_title participer_title">Adhérer au comité de soutien</p>
-        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur.</p>
-        <div style="margin: auto;width: 50%;" class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Je veux adhérer au comité de soutien
-              <!-- {{user_online.soutien}} -->
-            </label>
-          </div>
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button>
+        <p style="text-align: center;width: 80%;
+        margin-left: auto;
+        margin-right: auto;">Le comité de soutien est le relais privé de la candidature.
+          Les membres du comité de soutien font part à leur entourage de l’existence de cette 
+          candidature. Ils reçoivent et diffusent des informations au cours de la campagne..</p>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">J’adhère au comité de soutien </button>
     </div>
     <div class="div_participer">
         <p class="home_article size_title participer_title">Rejoindre l'équipe de campagne</p>
-        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur.</p>
-        <div style="margin: auto;width: 50%;" class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Je rejoins l'équipe de campagne
-              <!-- {{user_online.campagne}} -->
-            </label>
-          </div>
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button>
+        <p style="text-align: center;width: 80%;
+        margin-left: auto;
+        margin-right: auto;">L’équipe de campagne est le relais public de la candidature.
+          Les membres de l’équipe de campagne agissent sur le terrain pour faire connaître la 
+          candidature. Ils reçoivent du matériel de campagne à diffuser.</p>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je rejoins l’équipe de campagne</button>
     </div>
     <div class="div_participer">
         <p class="home_article size_title participer_title">Faire un don</p>
-        <p style="text-align: center;">Venez nous excuser pour ce retard. Actuellement, le seul moyen de soutenir Stephane Wendlinger 
-            est en envoyant un chéque à l'adresse suivante : </p>
-      <div style="flex-direction: row;
+        <p style="text-align: center;width: 80%;
+        margin-left: auto;
+        margin-right: auto;">La réalisation d’un don marque un soutien individuel 
+          essentiel à la candidature.
+          Il donne droit à une réduction d’impôt de 66% de son montant.</p>
+      <!-- <div style="flex-direction: row;
       justify-content: space-around;" class="flex">
         <div style="font-weight: 700;" class="form-check">
             Actuel : <br>
@@ -64,21 +66,17 @@
           Don par carte banquaire<br>
           Virement SEPA<br> 
         </div>
-      </div>
+      </div> -->
         <!-- <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button> -->
-    </div>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je fais un don</button>
+    
+      </div>
     <div class="div_participer">
         <p class="home_article size_title participer_title">Parrainer le candidat</p>
-        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur.</p>
-        <div style="margin: auto;width: 50%;" class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Je suis élu et je souhaite parrainer le candidat
-              <!-- {{user_online.elu}} -->
-            </label>
-          </div>
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button>
+        <p style="text-align: center;width: 80%;
+        margin-left: auto;
+        margin-right: auto;">Les élus, notamment les maires, peuvent parrainer le candidat qui doit recueillir 500 signatures pour devenir candidat officiel.</p>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je souhaite parrainer Stéphane Wendlinger </button>
     </div>
 </div>
 

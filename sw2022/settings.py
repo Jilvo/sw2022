@@ -32,7 +32,7 @@ if ENV == 'PRODUCTION':
     ALLOWED_HOSTS = ['51.15.201.198','127.0.0.1']
 else:
     DEBUG = True
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['51.15.201.198','127.0.0.1']
 
 # Application definition
 
@@ -95,8 +95,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "sw2022",
-        "USER": "postgres",
-        "PASSWORD": "root",
+        "USER": "jilvo ",
+        "PASSWORD": "dijo2112",
         "HOST": "localhost",
     }
 }
