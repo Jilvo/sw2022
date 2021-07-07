@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-ENV = 'PRODUCTION'
+ENV = 'PROUCTION'
 SECRET_KEY = 'django-insecure-rsv+p3xaj1mwe%kncjssi4tf-p7$2vk@kd9g$+vt@t8u15sma9'
 # ENV = os.environ.get("ENV")
 # SECRET_KEY = os.environ.get("SECRET_KEY")
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-rsv+p3xaj1mwe%kncjssi4tf-p7$2vk@kd9g$+vt@t8u15sma9
 # SECURITY WARNING: don't run with debug turned on in production!
 if ENV == 'PRODUCTION':
     DEBUG = False
-    ALLOWED_HOSTS = ['51.15.201.198']
+    ALLOWED_HOSTS = ['51.15.201.198','127.0.0.1']
 else:
     DEBUG = True
     ALLOWED_HOSTS = ['127.0.0.1']
@@ -120,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# Authentication backends
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -140,6 +140,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = str(BASE_DIR / "staticfiles")
+# STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, "staticfiles")
+    
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

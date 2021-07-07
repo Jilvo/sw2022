@@ -20,7 +20,7 @@
         {% for suivre in actu_suivre %}
         <div>
             <p style="font-size: 1vw;" class="home_article size_article">{{suivre.title}}</p>
-            <p style="margin-left: 1vw;">{{suivre.link}}</p>
+            <p style="margin-left: 1vw;"><a href="{{suivre.link}}" target="_blank">{{suivre.link}}</a></p>
         </div>
        {% endfor %}
     </div>
@@ -29,9 +29,10 @@
     {% for agenda in agenda_suivre %}
     <div>
         <p style="font-size: 1vw;" class="home_article size_article">{{agenda.title}}</p>
-        <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.heure}} •</p>
+        <p style="margin-left: 1vw;">• Le {{agenda.date}} •</p>
+        <!-- <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.heure}} •</p> -->
         <p style="margin-left: 1vw;">• {{agenda.lieu}} •</p>
-        <p style="margin-left: 1vw;">• {{agenda.ville}} •</p>
+        <!-- <p style="margin-left: 1vw;">• {{agenda.ville}} •</p> -->
     </div>
     {% endfor %}
 </div>

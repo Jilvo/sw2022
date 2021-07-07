@@ -9,8 +9,9 @@ class Savoir(models.Model):
 
     title = models.CharField(max_length=150)
     date = models.CharField(max_length=50)
+    sous_titre = models.CharField(max_length=150,blank=True)
     link_yt = models.CharField(max_length=200, blank=True)
-    link_pdf = models.CharField(max_length=100, blank=True)
+    link_pdf = models.CharField(max_length=100, default="static/assets/pdf_savoir/",blank=True)
     ouvert_par_defaut = models.CharField(max_length=10, default="", blank=True)
     disponible = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)

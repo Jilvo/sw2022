@@ -18,7 +18,7 @@
               <p class="home_article">></p>
               <div>
               <p class="home_article">{{actu.title}}</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at cursus velit, a pulvinar ex. Pellentesque bibendum ut dolor quis imperdiet. Aliquam erat volutpat. Nulla non hendrerit nisl. Nullam tempor a turpis eget rhoncus. </p>
+              <p>{{actu.sous_titre}}</p>
             </div>
               <!-- <a href=""><i class="fas fa-play fa-2x button_home_article"></i></a> -->
               <!-- <a href={{actu.link_pdf}} target="_blank"><i class="fas fa-file-pdf fa-2x button_home_article"></i></a> -->
@@ -32,7 +32,7 @@
           height: 22.5vw;" class="yt_video" src="{{actu.link_yt}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
           </iframe>
     </div>
-      <button type="button" class="btn btn-outline-primary button_connaitre"><a class="link_hidden" href={{actu.link_pdf}}>Voir le PDF</a></button>
+      <a style="display: flex; text-decoration: none !important;" href="{{actu.link_pdf}}" target="_blank"><button type="button" class="btn btn-outline-primary button_connaitre">Voir le PDF</button></a>
     </div>
   </div>
 
