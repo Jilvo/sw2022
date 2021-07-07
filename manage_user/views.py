@@ -62,6 +62,7 @@ def contactView(request):
 
 
 def successView(request):
+    # return render(request, "index.html")
     return HttpResponse("Success! Thank you for your message.")
 
 

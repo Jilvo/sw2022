@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-rsv+p3xaj1mwe%kncjssi4tf-p7$2vk@kd9g$+vt@t8u15sma9
 # SECURITY WARNING: don't run with debug turned on in production!
 if ENV == 'PRODUCTION':
     DEBUG = False
-    ALLOWED_HOSTS = ['163.172.188.251','127.0.0.1']
+    ALLOWED_HOSTS = ['51.15.201.198']
 else:
     DEBUG = True
     ALLOWED_HOSTS = ['127.0.0.1']
@@ -37,15 +37,14 @@ else:
 # Application definition
 
 INSTALLED_APPS = [
-    'actus',
-    'manage_user',  #app for send mail
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   
+    'actus',
+    'manage_user', 
 ]
 SENDGRID_API_KEY = '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'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
