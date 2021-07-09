@@ -1,37 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-<div style="flex-direction: column; margin-top: 78px;" class="flex">
+<img style="margin-top: 78px;" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<div style="flex-direction: column; margin-top: 10px;" class="flex">
     <form action="{% url 'join_newsletter' %}" method="GET">
     <!-- <p style="text-align: center;" class="home_article size_article">S'inscrire à la newsletter</p> -->
         <div style="margin-left: auto;
         margin-right: auto; margin-top: 20px;"class="col-sm-10">
-          <input type="email" class="form-control" id="email" placeholder="Quel est votre adresse mail ?" name="email">
+          <input type="email" class="form-control" id="email" placeholder="Mon adresse électronique" name="email">
         </div>
         <div style="margin-top: 20px;"class="text-center"> 
-            <button type="submit" class="btn btn-outline-primary button_connaitre contact_send ">S'inscrire à la newsletter</button>
+            <button type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je m’inscris à la lettre d’information</button>
         </div>
 </form>
 </div>
 <div class="flex_suivre">
     <div class="link_suivre">
-        <p style="text-align: center;" class="home_article size_title">Dernieres Actualités</p>
+        <p style="text-align: center;" class="home_article size_title">Actualité</p>
         {% for suivre in actu_suivre %}
         <div>
-            <p style="font-size: 1vw;" class="home_article size_article">{{suivre.title}}</p>
-            <p style="margin-left: 1vw;"><a href="{{suivre.link}}" target="_blank">{{suivre.link}}</a></p>
+            <p style="font-size: 1vw;" class="home_article size_article">{{suivre.date}} > {{suivre.title}}</p>
+            <p style="margin-left: 40px;"><a href="{{suivre.link}}" target="_blank">{{suivre.link}}</a></p>
         </div>
        {% endfor %}
     </div>
 <div class="link_suivre">
-    <p style="text-align: center;" class="home_article size_title">Agendas</p>
+    <p style="text-align: center;" class="home_article size_title">Agenda</p>
     {% for agenda in agenda_suivre %}
     <div>
-        <p style="font-size: 1vw;" class="home_article size_article">{{agenda.title}}</p>
-        <p style="margin-left: 1vw;">• Le {{agenda.date}} •</p>
+        <p style="font-size: 1vw;" class="home_article size_article">{{agenda.date}} > {{agenda.title}}</p>
+        <!-- <p style="margin-left: 1vw;">• Le {{agenda.date}} •</p> -->
         <!-- <p style="margin-left: 1vw;">• Le {{agenda.date}} à partir de {{agenda.heure}} •</p> -->
-        <p style="margin-left: 1vw;">• {{agenda.lieu}} •</p>
+        <p style="margin-left: 40px;">• {{agenda.lieu}} •</p>
         <!-- <p style="margin-left: 1vw;">• {{agenda.ville}} •</p> -->
     </div>
     {% endfor %}

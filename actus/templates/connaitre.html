@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div style="padding-top: 100px; margin-top: 78px;" class="space_padding">
-    <p style="text-align: center;"class="home_article">Le candidat</p>
-<div class="accordion accordion-flush" id="accordionFlushExample">
+<img style="margin-top: 78px;" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<div style="padding-top: 10px;" class="space_padding">
+    <p style="text-align: center;font-size: 30px;"class="home_article">Le candidat</p>
+
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingOne">
         <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -11,17 +12,16 @@
         </button>
       </h2>
       <div style="flex-direction: column;" id="flush-collapse1" class="accordion-collapse collapse flex" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        Stéphane Wendlinger a pratiquement 53 ans, habite en Ardèche, est professeur de mathématiques
+        <p style="margin-top: 10px;">Stéphane Wendlinger a pratiquement 53 ans, habite en Ardèche, est professeur de mathématiques
         dans l’enseignement secondaire public. Ingénieur de formation et diplômé de sciences politiques, il a
-        également une expérience de gérant d’entreprise.
+        également une expérience de gérant d’entreprise.</p>
         <a style="display: flex; text-decoration: none !important;" href="{% static 'assets/pdf_connaitre/SW2022-Curriculum-Vitae.pdf' %}" target="_blank"><button type="button" class="btn btn-outline-primary button_connaitre">Voir plus</button></a>
     </div>
     </div>
-</div>
+
 </div>
 <div style="padding-bottom: 100px;"class="space_padding">
-    <p style="text-align: center;"class="home_article">Parcours politique</p>
-<div class="accordion accordion-flush" id="accordionFlushExample">
+    <p style="text-align: center;font-size: 30px;"class="home_article">Parcours politique</p>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-heading2">
         <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -29,15 +29,14 @@
         </button>
       </h2>
         <div style="flex-direction: column;"  id="flush-collapse2" class="accordion-collapse collapse flex" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
-          Après deux travaux de fin d’études non conformistes, le jeune Stéphane Wendlinger, déjà déçu par
+          <p style="margin-top: 10px;">Après deux travaux de fin d’études non conformistes, le jeune Stéphane Wendlinger, déjà déçu par
           l’offre politique de l’époque, rédige un projet original pour la France qu’il nomme le publicalisme (qui
           reste d’ailleurs largement d’actualité). Il défend ce programme, en candidat citoyen et indépendant,
-          aux législatives de 1997, où il réalise un score honorable de 2,3 %. 
+          aux législatives de 1997, où il réalise un score honorable de 2,3 %. </p>
   
           <a style="display: flex; text-decoration: none !important;" href="{% static 'assets/pdf_connaitre/SW2022-Législatives-1997.pdf' %}" target="_blank"><button type="button" class="btn btn-outline-primary button_connaitre">Voir plus</button></a>
         </div>
       </div>
-    </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-heading3">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -45,9 +44,9 @@
         </button>
       </h2>
       <div style="flex-direction: column;" id="flush-collapse3" class="accordion-collapse collapse flex" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
-        Toujours dans un esprit citoyen et indépendant, Stéphane Wendlinger se présente aux élections
+        <p style="margin-top: 10px;">Toujours dans un esprit citoyen et indépendant, Stéphane Wendlinger se présente aux élections
         cantonales (désormais appelées départementales) et municipales de 2001. Il obtient plus de 10% des
-        voix dans le canton de Satillieu (Ardèche) et est élu conseiller municipal de son village. 
+        voix dans le canton de Satillieu (Ardèche) et est élu conseiller municipal de son village. </p>
         
         <a style="display: flex; text-decoration: none !important;" href="{% static 'assets/pdf_connaitre/SW2022-Cantonales-2001.pdf' %}" target="_blank"><button type="button" class="btn btn-outline-primary button_connaitre">Voir plus</button></a>
     </div>
@@ -59,12 +58,12 @@
         </button>
       </h2>
       <div style="flex-direction: column;" id="flush-collapse4" class="accordion-collapse collapse flex" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
-        Convaincu par le discours de Jean-Pierre Chevènement, Stéphane Wendlinger soutient sa
+        <p style="margin-top: 10px;">Convaincu par le discours de Jean-Pierre Chevènement, Stéphane Wendlinger soutient sa
         candidature à l’élection présidentielle, adhère au « Mouvement des Citoyens », puis se présente sous
         cette étiquette aux élections législatives. Cet espoir est malheureusement torpillé par le jeu
         politicien. À partir de 2008 et la fin de son mandat de conseiller municipal, Stéphane Wendlinger
         décide de prendre du recul par rapport à un champ politique qui reste désespérément banal et
-        caricatural. 
+        caricatural.</p>
         <a style="display: flex; text-decoration: none !important;" href="{% static 'assets/pdf_connaitre/SW2022-Législatives-2002.pdf' %}" target="_blank"><button type="button" class="btn btn-outline-primary button_connaitre">Voir plus</button></a>
     </div>
     </div>

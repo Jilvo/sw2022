@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-<p style="    margin-top: 78px;
+<img style="margin-top: 78px;" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<p style="margin-top: 10px;
 width: 80%;
 margin-left: auto;
 margin-right: auto;
 border: 1px solid #ced4da;
 border-radius: 10px;
 padding-top: 10px;
-padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendligner, inscriveez vous. Les données recueillies ne seront utilisées par les personnes dûment autorisées que le temps
-    de la campagne ; elles seront ensuite détruites. En aucun cas , elle ne seront vendues ou échangées. <a href="contact"> En savoir plus</a>
+padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendlinger, merci de créer un compte.
 </p>
 {% if user.is_authenticated %}
 <form action="{% url 'logout' %}" method="POST">
@@ -22,8 +21,8 @@ padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature d
 </li> -->
 {% else %}
 <div class="button_display">
-    <a class="link_hidden" href="login"><button type="button" class="btn btn-primary btn-lg">Connexion</button></a>
-    <a class="link_hidden" href="signup"><button type="button" class="btn btn-secondary btn-lg">S'inscrire</button></a>
+    <a class="link_hidden" href="login"><button type="button" class="btn btn-outline-primary button_connaitre contact_send_page contact_send">Je me connecte</button></a>
+    <a class="link_hidden" href="signup"><button type="button" class="btn btn-outline-primary button_connaitre contact_send_page contact_send">Je crée un compte</button></a>
     </div>
 {% endif %}
 <div class="participer_flex">
@@ -34,7 +33,7 @@ padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature d
         margin-right: auto;">Le comité de soutien est le relais privé de la candidature.
           Les membres du comité de soutien font part à leur entourage de l’existence de cette 
           candidature. Ils reçoivent et diffusent des informations au cours de la campagne..</p>
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">J’adhère au comité de soutien </button>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">J’adhère au comité de soutien </button>
     </div>
     <div class="div_participer">
         <p class="home_article size_title participer_title">Rejoindre l'équipe de campagne</p>
@@ -43,7 +42,7 @@ padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature d
         margin-right: auto;">L’équipe de campagne est le relais public de la candidature.
           Les membres de l’équipe de campagne agissent sur le terrain pour faire connaître la 
           candidature. Ils reçoivent du matériel de campagne à diffuser.</p>
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je rejoins l’équipe de campagne</button>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">Je rejoins l’équipe de campagne</button>
     </div>
     <div class="div_participer">
         <p class="home_article size_title participer_title">Faire un don</p>
@@ -68,7 +67,7 @@ padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature d
         </div>
       </div> -->
         <!-- <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Envoyer</button> -->
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je fais un don</button>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">Je fais un don</button>
     
       </div>
     <div class="div_participer">
@@ -76,7 +75,7 @@ padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature d
         <p style="text-align: center;width: 80%;
         margin-left: auto;
         margin-right: auto;">Les élus, notamment les maires, peuvent parrainer le candidat qui doit recueillir 500 signatures pour devenir candidat officiel.</p>
-        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je souhaite parrainer Stéphane Wendlinger </button>
+        <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">Je souhaite parrainer Stéphane Wendlinger </button>
     </div>
 </div>
 

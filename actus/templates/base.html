@@ -35,10 +35,6 @@
                         <li class="nav-item">
                             <a class="nav-link yellow_title shadow_title montserrat" href="participer" id="participer">PARTICIPER</a>
                         </li>
-                        <li style="text-align: center;margin-top: -7px;">
-                            <a href=""><i style="margin-top: 10px; margin-right: 20px;" class="fas fa-microphone fa-2x yellow_title" title="Ecouter les podcasts"></i></a>
-                            <a href="contacte"><i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
-                        </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user}}</a>
@@ -56,12 +52,16 @@
         <!-- Footer -->
         </body>
         <footer class="text-center text-lg-start ">
-            <div style="margin: 0 auto;" class="text-center p-3 ">
-              <a class="montserrat" href="mentions_legales">Mentions légales</a>
-              <a class="montserrat" href="contacte">Contact</a>
-                <a href="https://twitter.com/StephWendlinger"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+            <div style="margin: 0 auto;display: flex;
+            justify-content: space-evenly;" class="text-center p-3 ">
+                <a class="nav-link yellow_title shadow_title montserrat" href="mentions_legales">Mentions légales</a>
+                <div>
+                    <a href="contacte"><i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
+                    <a href="https://twitter.com/StephWendlinger"><i class="fab fa-twitter fa-2x yellow_title"></i></a>
+                    <a href="https://www.youtube.com/channel/UCtFSsdWnD9hZTvnTMGbkn3g"><i class="fab fa-youtube fa-2x yellow_title"></i></a>
+                </div>
             </div>
+            <p style="text-align: center; margin-bottom: 0px !important;" class="yellow_title">©SW2022 2021- Tout droit réservé</p>
           </footer>
 
           <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>

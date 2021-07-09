@@ -22,7 +22,6 @@ footer
   width: 100%;
   position: relative;
   bottom: 0px;
-  display: flex;
 }
 
 footer a
@@ -169,7 +168,6 @@ background: #F44336;
     .embedresize iframe {
     top: 0;
     left: 0;
-    width: 100%;
     }
 
 .scroll_div{
@@ -184,7 +182,13 @@ background: #F44336;
     padding-left: 100px;
     padding-right: 100px;
 }
+@media only screen and (max-width: 1000px) {
+    .space_padding{
+        padding-left: 10px;
+        padding-right: 10px;
 
+    } 
+}
 .button_connaitre{
     margin-left: auto;
     margin-right: auto;
@@ -214,6 +218,17 @@ background: #F44336;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+@media only screen and (max-width: 1000px) {
+    .contact_send_page{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 10px;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }       
+} 
 .not_dispo{
     color: grey !important;
     margin-left: 30px;
@@ -249,10 +264,22 @@ background: #F44336;
 }
 
 .yt_video{
-    /* width: 40vw;  */
-    /* height: 22.5vw; */
-    width: 960px;
-    height: 540px;
+    width: 61vw;
+    height: 34.5vw;
+    /* width: 960px;
+    height: 540px; */
+}
+@media only screen and (max-width: 1000px) {
+    .yt_video{
+    width: 75vw;
+    height: 42.5vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .yt_video{
+    width: 89vw;
+    height: 54.5vw;
+    }
 }
 .link_hidden{
     text-decoration: inherit;
@@ -319,6 +346,18 @@ background: #F44336;
     margin-top: 50px;
     margin-right: 1%;
 }
+@media only screen and (max-width: 500px) {
+    .div_participer{
+        width: 353px;
+        height: 361px;
+    } 
+}
+@media only screen and (max-width: 500px) {
+    .button_send_participer{
+        width: 80%;
+    } 
+}
+
 .div_signup{
     height: 400px !important;
 }
@@ -330,6 +369,12 @@ background: #F44336;
     justify-content: space-evenly;
     flex-direction: row;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .button_display{
+        flex-direction: column;
+    } 
 }
 .form_signup{
     margin-bottom: 10px !important;
