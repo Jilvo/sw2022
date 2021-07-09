@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<img style="margin-top: 78px;" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+<img style="margin-top: 0px" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
 <div>
   {% for actu_p in actus_pas_dispo %}
   <p class="home_article not_dispo">{{actu_p.date}} > {{actu_p.title}}</p>
