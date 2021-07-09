@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+<style>
+  #span_savoir{
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+  }
+</style>
 <img style="margin-top: 0px" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
 <div>
   {% for actu_p in actus_pas_dispo %}

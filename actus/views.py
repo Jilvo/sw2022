@@ -1,8 +1,9 @@
 from django.db.models import query
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse ,HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import redirect
+from django.contrib import messages
 
 from .models import Actusuivre, Savoir, Agendasuivre, Newsletter_model
 
@@ -48,7 +49,11 @@ def legals_mentions(request):
 def join_newsletter(request):
     query = request.GET.get("email")
     print(query)
+    
     new_reader = Newsletter_model.objects.create(email=query)
     # new_reader.save()
     print(new_reader)
-    return HttpResponse("Merci de vous être inscrit à la newsletter")
+    messages.success(request, "Vous êtes bien inscrit à notre lettre d'information")
+    return render(request, "suivre.html")
+    # return HttpResponseRedirect(request.path_info)
+    # return HttpResponse("Merci de vous être inscrit à la newsletter")

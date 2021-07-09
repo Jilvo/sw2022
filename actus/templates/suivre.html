@@ -1,16 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<style>
+    #span_suivre{
+      border-bottom: 3px solid white;
+      padding-bottom: 5px;
+    }
+  </style>
 <img style="margin-top: 0px" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
+{% if messages %}
+    {% for message in messages %}
+    <p style="text-align: center;" {% if message.tags %} class=" {{ message.tags }} home_article" {% endif %}> {{ message }} </p>
+    {% endfor %}
+{% endif %}
+
 <div style="flex-direction: column; margin-top: 10px;" class="flex">
-    <form action="{% url 'join_newsletter' %}" method="GET">
+    <form action="{% url 'join_newsletter' %}" method="GET" id="sub_to_newsletter">
     <!-- <p style="text-align: center;" class="home_article size_article">S'inscrire à la newsletter</p> -->
         <div style="margin-left: auto;
         margin-right: auto; margin-top: 20px;"class="col-sm-10">
           <input type="email" class="form-control" id="email" placeholder="Mon adresse électronique" name="email">
         </div>
         <div style="margin-top: 20px;"class="text-center"> 
-            <button type="submit" class="btn btn-outline-primary button_connaitre contact_send ">Je m’inscris à la lettre d’information</button>
+            <button type="submit" class="btn btn-outline-primary red_button_smartphone button_connaitre"data-bs-toggle="modal" data-bs-target="#exampleModal">Je m’inscris à la lettre d’information</button>
         </div>
 </form>
 </div>
@@ -45,4 +57,5 @@
     
 
 </div>
+
 {% endblock %}

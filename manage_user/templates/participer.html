@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<style>
+  #span_participer{
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+  }
+</style>
 <img style="margin-top: 0px" class="banner" src="{% static 'assets/banner_crop.jpg' %}">
-<p style="margin-top: 10px;
-width: 80%;
-margin-left: auto;
-margin-right: auto;
-border: 1px solid #ced4da;
-border-radius: 10px;
-padding-top: 10px;
-padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendlinger, merci de créer un compte.
+<p class="participer_texte"> Pour participer à la campagne et soutenir la candidature de Stéphane Wendlinger, merci de créer un compte.
 </p>
 {% if user.is_authenticated %}
 <form action="{% url 'logout' %}" method="POST">
   {% csrf_token %}
-<button style="margin-top: 10px;" type="submit" value="logout" class="btn btn-outline-primary button_connaitre contact_send" id="logout">Déconnexion</button>
+<button style="margin-top: 10px;" type="submit" value="logout" class="btn btn-outline-primary red_button_smartphone button_connaitre  " id="logout">Déconnexion</button>
 </form>
 <!-- <li class="nav-item">
     <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user}}</a>
@@ -32,7 +31,7 @@ padding-left: 7px;"> Pour participer à la campagne et soutenir la candidature d
         margin-left: auto;
         margin-right: auto;">Le comité de soutien est le relais privé de la candidature.
           Les membres du comité de soutien font part à leur entourage de l’existence de cette 
-          candidature. Ils reçoivent et diffusent des informations au cours de la campagne..</p>
+          candidature. Ils reçoivent et diffusent des informations au cours de la campagne.</p>
         <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">J’adhère au comité de soutien </button>
     </div>
     <div class="div_participer">

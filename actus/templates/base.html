@@ -19,7 +19,7 @@
 
         <!-- Navbar -->
         <nav style="justify-content: center;"class="navbar navbar-expand-lg navbar-dark bg_nav_bar">
-            <a style="font-size: 30px!important;" class="navbar-brand logo_position yellow_title shadow_title" href="#">SW2022</a>
+            <a style="font-size: 30px!important;" class="navbar-brand logo_position yellow_title shadow_title" href="/"><img style="width: 50px;"src="{% static 'assets/logo.png' %}"></a>
             <div class="container">
                 <button style="margin-top: 5px;" class="navbar-toggler button_hamburger" type="button" id="collapseExample" data-toggle="collapse" data-target="#navbar1">
                     <span class="navbar-toggler-icon"></span>
@@ -27,16 +27,16 @@
                 <div class="navbar-collapse collapse" id="navbar1">
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="/" id="savoir">SAVOIR</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="/" id="savoir"><span id="span_savoir">SAVOIR</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="connaitre" id="connaitre">CONNAÎTRE</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="connaitre" id="connaitre"><span id="span_connaitre">CONNAÎTRE</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="suivre" id="suivre">SUIVRE</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="suivre" id="suivre"><span id="span_suivre">SUIVRE</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="participer" id="participer">PARTICIPER</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="participer" id="participer"><span id="span_participer">PARTICIPER</span></a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
@@ -55,14 +55,15 @@
         <footer class="text-center text-lg-start ">
             <div style="margin: 0 auto;display: flex;
             justify-content: space-evenly;" class="text-center p-3 ">
-                <a class="nav-link yellow_title shadow_title montserrat" href="mentions_legales">Mentions légales</a>
-                <div>
+                <a class="nav-link yellow_title shadow_title montserrat" href="mentions_legales"><span id="span_legals_mentions">Mentions légales</span></a>
+                <div style="display: flex;
+                flex-direction: row;">
                     <a href="contacte"><i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
                     <a href="https://twitter.com/StephWendlinger"><i class="fab fa-twitter fa-2x yellow_title"></i></a>
                     <a href="https://www.youtube.com/channel/UCtFSsdWnD9hZTvnTMGbkn3g"><i class="fab fa-youtube fa-2x yellow_title"></i></a>
                 </div>
             </div>
-            <p style="text-align: center; margin-bottom: 0px !important;" class="yellow_title">©SW2022 2021- Tout droit réservé</p>
+            <p style="text-align: center; margin-bottom: 0px !important;" class="yellow_title">©2021 SW2022 – Tous droits réservés</p>
           </footer>
 
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
