@@ -58,13 +58,26 @@
 <div style="margin-top: 78px;" class="container mt-5 ">
     <div class="row d-flex justify-content-center ">
         <div class="col-md-6">
-            <div class="card p-4 py-5 div_participer div_signup">
+            <div style="margin-left: auto;
+            margin-right: auto;" class="card p-4 py-5 div_participer div_signup">
 				<form action="{% url 'signup' %}" method="POST">
 				{% csrf_token %}
                 <h2>Créer un compte</h2>
                 <div class="d-flex flex-row"> <span class="mr-2">Vous avez déja un compte ? </span> <a href="login" style="margin-left: 1em;"class="signin-link">Connectez vous ici</a> </div>
-                <div class="signup mt-3"> <input type="email" name="email" class="form-control form_signup" placeholder="Email"> 
-                    <input type="text" name="username" class="form-control form_signup" placeholder="Nom"> 
+                <div class="signup mt-3"> 
+					<input type="email" name="email" class="form-control form_signup" placeholder="Email"> 
+					<input type="text" name="username" class="form-control form_signup" placeholder="Nom Prénom">
+                    <!-- <input type="text" name="name" class="form-control form_signup" placeholder="Nom">
+					<input type="text" name="forname" class="form-control form_signup" placeholder="Prénom"> 
+					<input type="text" name="age" class="form-control form_signup" placeholder=Âge> 
+					<input type="text" name="profession" class="form-control form_signup" placeholder="Profession"> 
+					<input type="text" name="adresse" class="form-control form_signup" placeholder="Adresse"> 
+					<input type="text" name="code_postal" class="form-control form_signup" placeholder="Code Postal"> 
+					<input type="text" name="commune" class="form-control form_signup" placeholder="Commune">
+					<input type="text" name="pays" class="form-control form_signup" placeholder="Pays"> 
+					<input type="text" name="telephone" class="form-control form_signup" placeholder="Telephone">
+					<input type="checkbox" id="horns" name="elu"> -->
+					<!-- <input type="text" name="fonction_elu" class="form-control form_signup" placeholder="Fonction en tant qu'élu"> -->
                     <input type="password" name="password" class="form-control form_signup" placeholder="Mot de passe"> </div>
                 <div class="mt-4"> <button class="btn btn-danger button btn-block">S'inscrire</button> </div>
 				</form>
