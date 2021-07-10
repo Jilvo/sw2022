@@ -23,7 +23,8 @@
                 <form action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
                 <h2>Connexion</h2>
-                <div class="signup mt-3"> <input type="email" name="email" class="form-control form_signup" placeholder="Email"> 
+                <div class="signup mt-3"> 
+                    <input type="text" name="username" class="form-control form_signup" placeholder="Email"> 
                     <input type="password" name="password" class="form-control form_signup" placeholder="Mot de passe"> </div>
                     <div class="d-flex flex-row"> <a href="#" class="signin-link">J’ai oublié mon mot de passe</a> </div>
                 <div class="mt-4"> <button type="submit" class="btn btn-danger button btn-block">Se connecter</button> </div>
