@@ -27,20 +27,20 @@
                 <div class="navbar-collapse collapse" id="navbar1">
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="/" id="savoir"><span id="span_savoir">SAVOIR</span></a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="/" id="savoir"><span class="span_hover" id="span_savoir">SAVOIR</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="connaitre" id="connaitre"><span id="span_connaitre">CONNAÎTRE</span></a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="connaitre" id="connaitre"><span class="span_hover" id="span_connaitre">CONNAÎTRE</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="suivre" id="suivre"><span id="span_suivre">SUIVRE</span></a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="suivre" id="suivre"><span class="span_hover" id="span_suivre">SUIVRE</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="participer" id="participer"><span id="span_participer">PARTICIPER</span></a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="participer" id="participer"><span class="span_hover" id="span_participer">PARTICIPER</span></a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user}}</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user.first_name}} {{user.last_name}}</a>
                         </li>
                         {% else %}
                         {% endif %}

@@ -1,4 +1,5 @@
 from django.core.mail import send_mail, BadHeaderError
+from django.db.models import query
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
@@ -84,9 +85,11 @@ def register(request):
     if request.method == "POST":
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data["username"]
+            username = form.cleaned_data["email"]
             password = form.cleaned_data["password"]
             email = form.cleaned_data["email"]
+            first_name = form.cleaned_data["first_name"]
+            last_name = form.cleaned_data["last_name"]
             try:
                 user = form.save(commit=False)
                 user.set_password(request.POST["password"])
@@ -94,7 +97,7 @@ def register(request):
                 login(request, user)  # nous connectons l'utilisateur
             except Exception as e:
                 form = RegistrationForm()
-            return render(request, "login.html")
+            return render(request, "formulaire.html")
         else:
             return render(request, "login.html")
 
@@ -123,6 +126,60 @@ def connexion(request):
         context = {"ConnexionForm": ConnexionForm()}
         return render(request, "login.html", context)
 
+def formulaire_function(request):
+    """Formulaire after signup"""
+    user_online = request.user
+    user_login = RegisteredUser.objects.get(user=user_online)
+    context = {"user_online": user_login}
+    if RegisteredUser.objects.filter(user=user_online).exists():
+        user_login = RegisteredUser.objects.get(user=user_online)
+        context = {"user_online": user_login}
+    else:
+        pass
+    return render(request, "formulaire.html",context)
+
+def complete_signup(request):
+    user_account = request.user
+    # print(user_account)
+    if RegisteredUser.objects.filter(user=user_account).exists():
+        pass
+    else:
+        query_2 = RegisteredUser.objects.create(user=user_account)
+    list_data = [
+     
+        "change_age",
+        "change_profession",
+        "change_adresse",
+        "change_code_postal",
+        "change_commune",
+        "change_pays",
+        "change_telephone",
+        "change_fonction_elu",
+    ]
+    list_to_change = [
+        "age",
+        "profession",
+        "adresse",
+        "code_postal",
+        "commune",
+        "pays",
+        "telephone",
+        "fonction_elu",
+    ]
+    for data, change in zip(list_data, list_to_change):
+        query = request.GET.get(data)
+        # print(list_data)
+        # print(query)
+        print(query)
+        print(change)
+        update_query = RegisteredUser.objects.filter(user=user_account)
+        print(update_query
+        )
+        # print(update_query)
+        # query_2.change = query
+        # print(query_2)
+        # query_2.save()
+    return render(request, "index.html")
 
 def modify_account_function(request):
     list_data = [

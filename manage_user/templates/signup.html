@@ -63,10 +63,11 @@
 				<form action="{% url 'signup' %}" method="POST">
 				{% csrf_token %}
                 <h2>Créer un compte</h2>
-                <div class="d-flex flex-row"> <span class="mr-2">Vous avez déja un compte ? </span> <a href="login" style="margin-left: 1em;"class="signin-link">Connectez vous ici</a> </div>
-                <div class="signup mt-3"> 
-					<input type="email" name="email" class="form-control form_signup" placeholder="Email"> 
-					<input type="text" name="username" class="form-control form_signup" placeholder="Nom Prénom">
+                <div class="signup mt-3">
+					<input type="text" name="last_name" class="form-control form_signup" placeholder="Nom">
+					<input type="text" name="first_name" class="form-control form_signup" placeholder="Prénom">
+					<input type="email" name="username" class="form-control form_signup" placeholder="Adresse mail">
+					<input type="email" name="email" class="form-control form_signup" placeholder="Vérification adresse mail">
                     <!-- <input type="text" name="name" class="form-control form_signup" placeholder="Nom">
 					<input type="text" name="forname" class="form-control form_signup" placeholder="Prénom"> 
 					<input type="text" name="age" class="form-control form_signup" placeholder=Âge> 
@@ -79,7 +80,7 @@
 					<input type="checkbox" id="horns" name="elu"> -->
 					<!-- <input type="text" name="fonction_elu" class="form-control form_signup" placeholder="Fonction en tant qu'élu"> -->
                     <input type="password" name="password" class="form-control form_signup" placeholder="Mot de passe"> </div>
-                <div class="mt-4"> <button class="btn btn-danger button btn-block">S'inscrire</button> </div>
+                <div class="mt-4"> <button class="btn btn-outline-primary button_connaitre contact_send_page contact_send">S'inscrire</button> </div>
 				</form>
             </div>
         </div>

@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class RegisteredUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    age = models.IntegerField(null=True)
+    age = models.CharField(max_length=10,null=True)
     profession = models.CharField(max_length=100, blank=True)
     adresse = models.CharField(max_length=100)
     code_postal = models.CharField(max_length=5)
@@ -19,6 +19,3 @@ class RegisteredUser(models.Model):
     soutien = models.BooleanField(default=False)
     campagne = models.BooleanField(default=False)
     parrainage = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.profession

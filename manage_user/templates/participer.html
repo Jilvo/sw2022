@@ -33,7 +33,7 @@
           Les membres du comité de soutien font part à leur entourage de l’existence de cette 
           candidature. Ils reçoivent et diffusent des informations au cours de la campagne.</p>
           {% if user.is_authenticated %}
-          <a href="mailto:soutien@sw2022.fr?subject=Adhésion au groupe de Soutien&body=Je souhaite rejoindre le groupe de soutien, mon adresse mail est {{user.email}}">
+          <a style="text-decoration: none !important;" href="mailto:soutien@sw2022.fr?subject=Adhésion au groupe de Soutien&body=Je souhaite rejoindre le groupe de soutien, mon adresse mail est {{user.email}}">
           <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">J’adhère au comité de soutien </button></a>
         {% else %}
         {% endif %}
@@ -46,7 +46,7 @@
           Les membres de l’équipe de campagne agissent sur le terrain pour faire connaître la 
           candidature. Ils reçoivent du matériel de campagne à diffuser.</p>
           {% if user.is_authenticated %}
-          <a href="mailto:campagne@sw2022.fr?subject=Equipe de Campagne&body=Je souhaite rejoindre l'équipe de campagne, mon adresse mail est {{user.email}}">
+          <a style="text-decoration: none !important;" href="mailto:campagne@sw2022.fr?subject=Equipe de Campagne&body=Je souhaite rejoindre l'équipe de campagne, mon adresse mail est {{user.email}}">
           <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">Je rejoins l’équipe de campagne</button></a>
           {% else %}
         {% endif %}
@@ -85,7 +85,7 @@
         margin-left: auto;
         margin-right: auto;">Les élus, notamment les maires, peuvent parrainer le candidat qui doit recueillir 500 signatures pour devenir candidat officiel.</p>
         {% if user.is_authenticated %}
-        <a href="mailto:parrainage@sw2022.fr?subject=Parrainage candidat&body=Je souhaite parrainer le candidat, mon adresse mail est {{user.email}}">
+        <a style="text-decoration: none !important;" href="mailto:parrainage@sw2022.fr?subject=Parrainage candidat&body=Je souhaite parrainer le candidat, mon adresse mail est {{user.email}}">
         <button style="margin-top: 10px;" type="submit" class="btn btn-outline-primary button_connaitre button_send_participer contact_send ">Je souhaite parrainer Stéphane Wendlinger </button></a>
         {% else %}
         {% endif %}
