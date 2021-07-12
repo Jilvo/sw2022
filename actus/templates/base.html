@@ -43,7 +43,7 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link yellow_title shadow_title montserrat" href="">BONJOUR, {{user.first_name}} {{user.last_name}}</a>
+                            <a class="nav-link yellow_title shadow_title montserrat" href=""><i style="margin-right: 5px;" class="fas fa-user fa-lg"></i>{{user.first_name}} {{user.last_name}}</a>
                         </li>
                         {% else %}
                         {% endif %}
@@ -61,7 +61,7 @@
                 <a class="nav-link yellow_title shadow_title montserrat" href="mentions_legales"><span id="span_legals_mentions">Mentions légales</span></a>
                 <div style="display: flex;
                 flex-direction: row;">
-                    <a href="contacte"><i style="margin-top: 10px;" class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
+                    <a href="mailto:contact@sw2022.fr"><i class="fas fa-envelope fa-2x yellow_title" title="Envoyer un message au candidat"></i></a>
                     <a href="https://twitter.com/StephWendlinger"><i class="fab fa-twitter fa-2x yellow_title"></i></a>
                     <a href="https://www.youtube.com/channel/UCtFSsdWnD9hZTvnTMGbkn3g"><i class="fab fa-youtube fa-2x yellow_title"></i></a>
                 </div>
